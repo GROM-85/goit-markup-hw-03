@@ -1,3 +1,14 @@
+html{
+  box-sizing: border-box;
+}
+
+/* set by default in modern-normalize styles */
+*,
+*::before,
+*::after{
+  box-sizing:inherit;
+}
+
 /* all vars in root is available within this doc */
 /* could be set localy inside each class */
 :root {
@@ -15,6 +26,7 @@ body {
 
 .list {
   list-style: none; /* remove dots from list */
+  margin: 0 0;
 }
 
 a:link {
@@ -22,12 +34,13 @@ a:link {
 }
 .hidden-title {
   visibility: hidden;
+  margin: 0 0;
 }
 /* BUTTONS */
 .btn {
   background-color: var(--bcg-white-color);
   color: var(--primary-text-color);
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
   text-align: center;
   box-shadow: none;
@@ -40,9 +53,19 @@ a:link {
   background-color: #f5f4fa;
   color: var(--primary-text-color);
 }
+
+.container{  
+  width: 1170px;
+  padding:0 15px; 
+  outline:1px dotted #d85d11;
+}
+
 /* --------------------  navigation ----------------- */
-header {
+
+.page-header {
   background-color: var(--bcg-white-color);
+  display:flex;
+  align-items: center;
 }
 .logo span {
   font-family: Raleway;
@@ -51,15 +74,26 @@ header {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+  
 }
-.logo {
+.logo {  
   font-family: Raleway;
   font-size: 26px;
   font-weight: 700;
   color: inherit;
   line-height: 1.38;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.03em; 
+
 }
+
+.container .site-nav{
+  display: flex;
+  
+}
+.container .contacts{
+  display:flex;
+}
+
 .site-nav .link {
   font-size: 14px;
   font-weight: 500;
@@ -130,6 +164,7 @@ footer {
 /* ---------------- INDEX -> main -------------*/
 .hero {
   background-color: #2f303a;
+  margin: 0 0 94px;
 }
 .hero h1 {
   font-size: 44px;
@@ -139,6 +174,8 @@ footer {
   text-align: center;
   letter-spacing: 0.06rem;
   text-transform: uppercase;
+  outline: 2px dotted #117fd8;
+  margin: 0 0 30px;
 }
 .btn.primary {
   font-family: inherit;
@@ -148,6 +185,8 @@ footer {
   line-height: 1.9;
   display: flex;
   margin: auto;
+  padding: 10px 32px;
+  text-align: center;
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -159,22 +198,23 @@ footer {
   background-color: #117fd8;
 }
 
-.team-section {
-  background-color: #f5f4fa;
-}
-
 .section-title {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.16;
   letter-spacing: 0.03em;
   text-align: center;
+
+  margin: 0 0;
 }
+
 .features-title {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   text-align: left;
+
+  margin: 0 0;
 }
 
 .features-text {
@@ -183,10 +223,16 @@ footer {
   line-height: 1.71;
   color: var(--sec-text-color);
   text-align: left;
+
+  margin: 0 0;
 }
 
 .activity {
   display: flex;
+}
+
+.team-section {
+  background-color: #f5f4fa;
 }
 
 .team-title {
@@ -217,7 +263,9 @@ footer {
   font-size: 16px;
   line-height: 1.62;
   border-radius: 4px;
-  margin: 8px;
+  margin: 4px;
+  padding:6px 22px;
+  text-align: center;
 }
 
 .btn.secondary:hover,
@@ -229,10 +277,12 @@ footer {
   border-radius: 4px;
 }
 .content li{
-  outline: 2px solid #757575;
-  width:370px;
-}
-.content .cnt-title {
+  outline: 2px dashed #757575;
+  width: 370px;
+  margin: 30px;
+} 
+.content .cnt-title {  
+  outline:1px dotted #757575;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -243,12 +293,12 @@ footer {
   margin-bottom: 4px;
 }
 .content p {
+  outline: 1px dotted #757575;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.03em;
-  color: var(--sec-text-color);
-  margin-left: 24px;
-  margin-right: 24px;
-  margin-bottom: 4px;
+  color: var(--sec-text-color);  
+  margin: 0px 24px 20px;
+
 }
