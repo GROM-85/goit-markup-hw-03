@@ -46,17 +46,53 @@
         <div class="container">
           <h1 class="hidden-title">Main section</h1>
           <ul class="filter list">
-            <li><button class="btn secondary" type="button">All</button></li>
             <li>
-              <button class="btn secondary" type="button">Web-sites</button>
+              <button
+                class="btn secondary"
+                type="button"
+                onclick="filterChange('All')"
+              >
+                All
+              </button>
             </li>
-            <li><button class="btn secondary" type="button">Apps</button></li>
-            <li><button class="btn secondary" type="button">Design</button></li>
             <li>
-              <button class="btn secondary" type="button">Marketing</button>
+              <button
+                class="btn secondary"
+                type="button"
+                onclick="filterChange('Web-site')"
+              >
+                Web-sites
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn secondary"
+                type="button"
+                onclick="filterChange('Apps')"
+              >
+                Apps
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn secondary"
+                type="button"
+                onclick="filterChange('Design')"
+              >
+                Design
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn secondary"
+                type="button"
+                onclick="filterChange('Marketing')"
+              >
+                Marketing
+              </button>
             </li>
           </ul>
-          <ul class="content list">
+          <ul class="content list" id="content">
             <li class="card">
               <a href="#">
                 <img src="./images/website.jpg" alt="website" width="370" />
@@ -79,7 +115,7 @@
                   width="370"
                 />
                 <h2 class="cnt-title">Seafood Resturant</h2>
-                <p>App</p>
+                <p>Apps</p>
               </a>
             </li>
             <li class="card">
@@ -136,17 +172,48 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
       <div class="container">
         <a href="./index.html" class="logo-footer"><span>Web</span>Studio</a>
         <address class="address">
-          695 Park Ave, New York, NY 10065, United States
-          <ul class="contacts list">
-            <li><a href="mailto:info@example.com">info@example.com</a></li>
-            <li><a href="tel:+380961111111">+38 096 111 11 11</a></li>
+          <ul class="footer-contacts list">
+            <li class="item">
+              <a
+                class="link address-link"
+                href="https://goo.gl/maps/gs37guJ5S6naws7R7"
+                >695 Park Ave, New York, NY 10065, United States</a
+              >
+            </li>
+            <li class="item">
+              <a class="link" href="mailto:info@example.com"
+                >info@example.com</a
+              >
+            </li>
+            <li class="item">
+              <a class="link" href="tel:+380961111111">+38 096 111 11 11</a>
+            </li>
           </ul>
         </address>
       </div>
     </footer>
+    <script>
+      function filterChange(val) {
+        let cards = document.querySelectorAll(".card");
+        console.log(cards);
+
+        cards.forEach((card) => (card.style.display = ""));
+
+        for (i = 0; i < cards.length; i++) {
+          if (
+            cards[i].getElementsByTagName("p")[0].innerText != val &&
+            val != "All"
+          ) {
+            cards[i].style.display = "none";
+          } else {
+            cards[i].style.display = "flex";
+          }
+        }
+      }
+    </script>
   </body>
 </html>
