@@ -402,8 +402,13 @@ footer {
   justify-content: center;
   gap:30px;
 }
+
+.card-overlay img{
+  display:block;
+}
+
 .card-info{
-  padding:20px 24px;
+  padding:20px 24px ;
   border:1px solid #EEEEEE;
 
 }
