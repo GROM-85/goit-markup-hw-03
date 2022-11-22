@@ -57,8 +57,9 @@ a:link {
 
 .container {
   width: 1200px;
-  padding: 0 15px;
-  margin: 0 200px;
+  padding-left:15px;
+  padding-right:15px;
+  margin: 0 auto;
   /* outline: 2px solid #d85d11; */
 }
 .section{
@@ -283,6 +284,8 @@ footer {
 }
 
 .features-title {
+  margin: 0 0 10px;
+
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -290,6 +293,11 @@ footer {
 }
 
 .features-text {
+  margin:0 0 ;
+  /* width: calc((100% -90px)/4);
+  margin-right: 30px; */
+  
+
   font-size: 14px;
   font-weight: 400;
   line-height: 1.71;
