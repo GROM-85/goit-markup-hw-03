@@ -224,14 +224,32 @@ footer {
 
 /* ---------------- INDEX -> main -------------*/
 
+
+/* .hero-overlay {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url(../images/back_ground.jpg);
+  text-align: center;
+} */
+
 .hero {
-  background-color: #2f303a;  
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  height:600px;
+  background-color: #2F303A;
   text-align: center;
 }
-.hero h1 {
-  margin: 0 0 30px;
-  padding-top: 200px;
 
+.hero-container{
+  padding:200px 0;
+}
+
+.hero-title {
+  margin: 0 252px;
+  margin-bottom: 30px;  
+ 
   font-size: 44px;
   font-weight: 900;
   color: #ffffff;
@@ -241,8 +259,7 @@ footer {
   /* outline: 2px dotted #117fd8; */
   
 }
-.btn.primary {
-  margin: 0 0 200px;
+.btn.primary {  
   padding: 10px 32px;
 
   font-family: inherit;
